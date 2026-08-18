@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{87d3f802-ae2b-4a80-a033-7ebb799503c0}</ProjectGuid>
+    <RootNamespace>ShootingGame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>..\Includes\;$(ProjectDir)\;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Lib\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CraftEngine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>..\Includes\;$(ProjectDir)\;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Lib\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CraftEngine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Actor\Box.cpp" />
+    <ClCompile Include="Actor\DestroyEffect.cpp" />
+    <ClCompile Include="Actor\Enemy.cpp" />
+    <ClCompile Include="Actor\EnemyBullet.cpp" />
+    <ClCompile Include="Actor\EnemySpawner.cpp" />
+    <ClCompile Include="Actor\Game.cpp" />
+    <ClCompile Include="Actor\Ground.cpp" />
+    <ClCompile Include="Actor\NPC.cpp" />
+    <ClCompile Include="Actor\Player.cpp" />
+    <ClCompile Include="Actor\PlayerBullet.cpp" />
+    <ClCompile Include="Actor\Target.cpp" />
+    <ClCompile Include="Actor\Wall.cpp" />
+    <ClCompile Include="Level\CharacterSelectLevel.cpp" />
+    <ClCompile Include="Level\GameLevel.cpp" />
+    <ClCompile Include="Level\MenuLevel.cpp" />
+    <ClCompile Include="Level\RestLevel.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Manager\DialogueManager.cpp" />
+    <ClCompile Include="Manager\NPCManager.cpp" />
+    <ClCompile Include="Manager\QuestManager.cpp" />
+    <ClCompile Include="Manager\UIManager.cpp" />
+    <ClCompile Include="Actor\SurvivorBullet.cpp" />
+    <ClCompile Include="Actor\SurvivorEnemy.cpp" />
+    <ClCompile Include="Actor\SurvivorPlayer.cpp" />
+    <ClCompile Include="Level\SurvivorLevel.cpp" />
+    <ClCompile Include="Manager\SaveManager.cpp" />
+    <ClCompile Include="System\SpatialGrid.cpp" />
+    <ClCompile Include="System\WaveManager.cpp" />
+    <ClCompile Include="State\PlayerState.cpp" />
+    <ClCompile Include="Util\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor\Box.h" />
+    <ClInclude Include="Actor\DestroyEffect.h" />
+    <ClInclude Include="Actor\Enemy.h" />
+    <ClInclude Include="Actor\EnemyBullet.h" />
+    <ClInclude Include="Actor\EnemySpawner.h" />
+    <ClInclude Include="Actor\Game.h" />
+    <ClInclude Include="Actor\Ground.h" />
+    <ClInclude Include="Actor\NPC.h" />
+    <ClInclude Include="Actor\Player.h" />
+    <ClInclude Include="Actor\PlayerBullet.h" />
+    <ClInclude Include="Actor\Target.h" />
+    <ClInclude Include="Actor\Wall.h" />
+    <ClInclude Include="Level\CharacterSelectLevel.h" />
+    <ClInclude Include="Level\GameLevel.h" />
+    <ClInclude Include="Level\MenuLevel.h" />
+    <ClInclude Include="Level\RestLevel.h" />
+    <ClInclude Include="Manager\DataFileUtil.h" />
+    <ClInclude Include="Manager\DialogueManager.h" />
+    <ClInclude Include="Manager\NPCManager.h" />
+    <ClInclude Include="Manager\QuestManager.h" />
+    <ClInclude Include="Manager\UIManager.h" />
+    <ClInclude Include="State\PlayerState.h" />
+    <ClInclude Include="Actor\SurvivorBullet.h" />
+    <ClInclude Include="Actor\SurvivorEnemy.h" />
+    <ClInclude Include="Actor\SurvivorPlayer.h" />
+    <ClInclude Include="Level\SurvivorLevel.h" />
+    <ClInclude Include="System\ActorPool.h" />
+    <ClInclude Include="System\EnemyFSM.h" />
+    <ClInclude Include="Manager\SaveManager.h" />
+    <ClInclude Include="System\SpatialGrid.h" />
+    <ClInclude Include="System\StringUtil.h" />
+    <ClInclude Include="System\WaveManager.h" />
+    <ClInclude Include="Type\EnumTypes.h" />
+    <ClInclude Include="Type\QuestTypes.h" />
+    <ClInclude Include="Util\Timer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

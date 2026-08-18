@@ -1,0 +1,7 @@
+framerate = 120
+gameviewportwidth = 65
+gameviewportheight = 30
+uiviewportwidth = 45
+uiviewportheight = 30
+margin = 2
+downmargin = 3

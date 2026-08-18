@@ -1,0 +1,22 @@
+NPC: 0
+NAME: 시고르자브 선장님
+PORTRAIT: Dog.txt
+LINE: 어서오게, 오랜만이구먼.
+LINE: 밥은 먹었는가?
+LINE: 몸조심 하시게.
+QUEST: 1
+
+NPC: 1
+NAME: 미네르바 부엉이
+PORTRAIT: Owl.txt
+LINE: 여긴 왜 왔어? 저장할려고?
+LINE: 자, 여기 있어.
+QUEST: 3
+
+NPC: 2
+NAME: 킹 프로그
+PORTRAIT: KingFrog.txt
+LINE: 음? 돈이 되는 걸 갖고 왔어?
+LINE: 뭐야.. 아니라고?
+LINE: 그럼 내게 강화를 맡기던가.. 물건이라도 사던가 !
+QUEST: 2
